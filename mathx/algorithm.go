@@ -118,6 +118,17 @@ func Replace[T comparable](s []T, o T, n T) []T {
 	return s
 }
 
+func ReplaceArray[T comparable](s [][]T, o T, n T) [][]T {
+	for i, ts := range s {
+		for i2, t := range ts {
+			if t == o {
+				s[i][i2] = n
+			}
+		}
+	}
+	return s
+}
+
 func Index[T comparable](s []T, v T) int {
 	for i, n := range s {
 		if n == v {
