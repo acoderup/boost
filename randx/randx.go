@@ -282,9 +282,9 @@ func RandShuffle[T comparable](rand *Randx, s []T) []T {
 	return s
 }
 
-// RandShuffleWeights 随机打乱权重并返回 n 个索引
+// RandShuffleWeights randomly shuffles weights and returns n indices
 func RandShuffleWeights[T Number](rand *Randx, n int, weights []T) []int {
-	// 计算非零权重的数量
+	// Calculate the number of non-zero weights
 	var noZero int
 	var zeroValue T
 	for _, weight := range weights {
@@ -293,22 +293,22 @@ func RandShuffleWeights[T Number](rand *Randx, n int, weights []T) []int {
 		}
 	}
 
-	// 如果需要选择的数量少于非零权重的数量，抛出错误
+	// If the number of elements to select is less than the number of non-zero weights, panic
 	if n < noZero {
 		panic("n < noZero in RandShuffleWeights")
 	}
 
-	// 创建权重的副本，以便在不修改原数组的情况下进行操作
+	// Create a copy of the weights to avoid modifying the original array
 	weightsCopy := make([]T, len(weights))
 	copy(weightsCopy, weights)
 
-	// 存储随机选择的索引
+	// Array to store the randomly selected indices
 	indices := make([]int, n)
 	for i := 0; i < n; i++ {
-		// 根据权重随机选择一个索引
+		// Randomly select an index based on the weights
 		index := RandWeight(rand, weightsCopy)
 		indices[i] = index
-		// 将选择的索引对应的权重置零，防止再次被选择
+		// Set the weight of the selected index to zero to prevent it from being selected again
 		weightsCopy[index] = zeroValue
 	}
 
