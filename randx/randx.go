@@ -294,8 +294,8 @@ func RandShuffleWeights[T Number](rand *Randx, n int, weights []T) []int {
 	}
 
 	// If the number of elements to select is less than the number of non-zero weights, panic
-	if n < noZero {
-		panic("n < noZero in RandShuffleWeights")
+	if noZero < n {
+		panic("noZero < n in RandShuffleWeights")
 	}
 
 	// Create a copy of the weights to avoid modifying the original array
