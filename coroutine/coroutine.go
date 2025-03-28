@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tomas-qstarrs/boost/safe"
+	"github.com/acoderup/boost/safe"
 )
 
 var (

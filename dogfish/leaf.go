@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"reflect"
 
-	"github.com/tomas-qstarrs/boost/encoding"
+	"github.com/acoderup/boost/encoding"
 )
 
 var (

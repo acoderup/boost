@@ -5,7 +5,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/tomas-qstarrs/boost/mathx"
+	"github.com/acoderup/boost/mathx"
 )
 
 type Signed interface {

@@ -6,12 +6,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tomas-qstarrs/boost/device"
-	"github.com/tomas-qstarrs/boost/encoding"
-	"github.com/tomas-qstarrs/boost/message"
-	"github.com/tomas-qstarrs/boost/ref"
-	"github.com/tomas-qstarrs/boost/route"
-	"github.com/tomas-qstarrs/boost/style"
+	"github.com/acoderup/boost/device"
+	"github.com/acoderup/boost/encoding"
+	"github.com/acoderup/boost/message"
+	"github.com/acoderup/boost/ref"
+	"github.com/acoderup/boost/route"
+	"github.com/acoderup/boost/style"
 )
 
 var e1 = encoding.NewJSON()

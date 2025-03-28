@@ -5,8 +5,8 @@ import (
 	"math"
 	"strings"
 
+	"github.com/acoderup/boost/cast"
 	"github.com/dlclark/regexp2"
-	"github.com/tomas-qstarrs/boost/cast"
 )
 
 func Merge(ss ...string) string {

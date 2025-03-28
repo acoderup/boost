@@ -3,7 +3,7 @@ package encoding
 import (
 	"encoding/xml"
 
-	"github.com/tomas-qstarrs/boost/ref"
+	"github.com/acoderup/boost/ref"
 )
 
 type XML struct{}

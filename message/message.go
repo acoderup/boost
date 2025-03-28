@@ -1,8 +1,8 @@
 package message
 
 import (
-	"github.com/tomas-qstarrs/boost/encoding"
-	"github.com/tomas-qstarrs/boost/route"
+	"github.com/acoderup/boost/encoding"
+	"github.com/acoderup/boost/route"
 )
 
 type Message struct {

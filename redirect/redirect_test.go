@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/tomas-qstarrs/boost/redirect"
+	"github.com/acoderup/boost/redirect"
 )
 
 func TestRedirect(t *testing.T) {

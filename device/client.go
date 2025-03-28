@@ -6,7 +6,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/tomas-qstarrs/boost/message"
+	"github.com/acoderup/boost/message"
 )
 
 var (

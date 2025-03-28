@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tomas-qstarrs/boost/cast"
+	"github.com/acoderup/boost/cast"
 )
 
 func Do(a any) (err error) {

@@ -3,8 +3,8 @@ package device
 import (
 	"context"
 
-	"github.com/tomas-qstarrs/boost/magic"
-	"github.com/tomas-qstarrs/boost/message"
+	"github.com/acoderup/boost/magic"
+	"github.com/acoderup/boost/message"
 )
 
 type Router struct {

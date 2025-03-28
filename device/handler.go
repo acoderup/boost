@@ -4,9 +4,9 @@ import (
 	"context"
 	"reflect"
 
-	"github.com/tomas-qstarrs/boost/encoding"
-	"github.com/tomas-qstarrs/boost/magic"
-	"github.com/tomas-qstarrs/boost/message"
+	"github.com/acoderup/boost/encoding"
+	"github.com/acoderup/boost/magic"
+	"github.com/acoderup/boost/message"
 )
 
 type Handler struct {

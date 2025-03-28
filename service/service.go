@@ -8,13 +8,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tomas-qstarrs/boost/device"
-	"github.com/tomas-qstarrs/boost/encoding"
-	"github.com/tomas-qstarrs/boost/magic"
-	"github.com/tomas-qstarrs/boost/message"
-	"github.com/tomas-qstarrs/boost/route"
-	"github.com/tomas-qstarrs/boost/safe"
-	"github.com/tomas-qstarrs/boost/style"
+	"github.com/acoderup/boost/device"
+	"github.com/acoderup/boost/encoding"
+	"github.com/acoderup/boost/magic"
+	"github.com/acoderup/boost/message"
+	"github.com/acoderup/boost/route"
+	"github.com/acoderup/boost/safe"
+	"github.com/acoderup/boost/style"
 )
 
 type Service struct {

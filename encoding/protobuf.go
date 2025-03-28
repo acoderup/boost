@@ -3,7 +3,7 @@ package encoding
 import (
 	"errors"
 
-	"github.com/tomas-qstarrs/boost/ref"
+	"github.com/acoderup/boost/ref"
 
 	"google.golang.org/protobuf/proto"
 )

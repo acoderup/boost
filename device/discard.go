@@ -3,7 +3,7 @@ package device
 import (
 	"context"
 
-	"github.com/tomas-qstarrs/boost/message"
+	"github.com/acoderup/boost/message"
 )
 
 type discard struct {

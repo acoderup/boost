@@ -3,7 +3,7 @@ package dogfish_test
 import (
 	"testing"
 
-	. "github.com/tomas-qstarrs/boost/dogfish"
+	. "github.com/acoderup/boost/dogfish"
 )
 
 func TestCompress(t *testing.T) {

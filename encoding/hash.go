@@ -3,7 +3,7 @@ package encoding
 import (
 	"encoding/json"
 
-	"github.com/tomas-qstarrs/boost/ref"
+	"github.com/acoderup/boost/ref"
 )
 
 type Hash struct{}

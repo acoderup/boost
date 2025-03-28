@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/tomas-qstarrs/boost/magic"
+	"github.com/acoderup/boost/magic"
 )
 
 var (

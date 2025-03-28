@@ -3,8 +3,8 @@ package stringx_test
 import (
 	"testing"
 
+	"github.com/acoderup/boost/stringx"
 	"github.com/stretchr/testify/assert"
-	"github.com/tomas-qstarrs/boost/stringx"
 )
 
 func TestCompareVersion(t *testing.T) {

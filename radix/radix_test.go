@@ -3,7 +3,7 @@ package radix_test
 import (
 	"testing"
 
-	"github.com/tomas-qstarrs/boost/radix"
+	"github.com/acoderup/boost/radix"
 )
 
 func TestRadix(t *testing.T) {

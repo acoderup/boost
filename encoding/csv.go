@@ -3,7 +3,7 @@ package encoding
 import (
 	"bytes"
 
-	"github.com/tomas-qstarrs/boost/ref"
+	"github.com/acoderup/boost/ref"
 
 	"github.com/gocarina/gocsv"
 )

@@ -11,7 +11,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/tomas-qstarrs/boost/cast"
+	"github.com/acoderup/boost/cast"
 )
 
 type ResponseFunc = func(*http.Client) (*http.Response, error)

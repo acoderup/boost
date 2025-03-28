@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/tomas-qstarrs/boost/magic"
-	"github.com/tomas-qstarrs/boost/route"
-	"github.com/tomas-qstarrs/boost/style"
+	"github.com/acoderup/boost/magic"
+	"github.com/acoderup/boost/route"
+	"github.com/acoderup/boost/style"
 )
 
 func TestRoute(t *testing.T) {

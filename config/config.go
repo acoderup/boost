@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"regexp"
 
+	"github.com/acoderup/boost/cast"
 	"github.com/spf13/viper"
-	"github.com/tomas-qstarrs/boost/cast"
 )
 
 type Reader interface {

@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tomas-qstarrs/boost/cast"
+	"github.com/acoderup/boost/cast"
 )
 
 func TestStringToDuration(t *testing.T) {

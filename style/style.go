@@ -3,7 +3,7 @@ package style
 import (
 	"strings"
 
-	"github.com/tomas-qstarrs/boost/magic"
+	"github.com/acoderup/boost/magic"
 )
 
 var abbrs = []string{

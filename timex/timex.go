@@ -1,8 +1,8 @@
 package timex
 
 import (
+	"github.com/acoderup/boost/cast"
 	"github.com/tidwall/gjson"
-	"github.com/tomas-qstarrs/boost/cast"
 )
 
 type Timex struct {

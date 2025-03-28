@@ -3,9 +3,9 @@ package coroutine_test
 import (
 	"testing"
 
+	"github.com/acoderup/boost/coroutine"
+	"github.com/acoderup/boost/safe"
 	. "github.com/frankban/quicktest"
-	"github.com/tomas-qstarrs/boost/coroutine"
-	"github.com/tomas-qstarrs/boost/safe"
 )
 
 func TestCreate(t *testing.T) {

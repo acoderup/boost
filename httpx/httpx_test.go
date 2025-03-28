@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/tomas-qstarrs/boost/httpx"
+	"github.com/acoderup/boost/httpx"
 )
 
 func TestRequestRequestFunc(t *testing.T) {

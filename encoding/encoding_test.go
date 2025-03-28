@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/tomas-qstarrs/boost/encoding"
-	"github.com/tomas-qstarrs/boost/style"
+	"github.com/acoderup/boost/encoding"
+	"github.com/acoderup/boost/style"
 )
 
 func TestChain(t *testing.T) {

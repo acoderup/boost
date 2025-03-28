@@ -6,8 +6,8 @@ import (
 	"math/big"
 	"testing"
 
+	"github.com/acoderup/boost/cast"
 	. "github.com/frankban/quicktest"
-	"github.com/tomas-qstarrs/boost/cast"
 )
 
 func runStringTest(c *C, tests []testStep, tove func(any) (any, error), tov func(any) any) {

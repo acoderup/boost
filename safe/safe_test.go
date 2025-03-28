@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tomas-qstarrs/boost/safe"
+	"github.com/acoderup/boost/safe"
 
 	. "github.com/frankban/quicktest"
 )

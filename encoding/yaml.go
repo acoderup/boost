@@ -1,7 +1,7 @@
 package encoding
 
 import (
-	"github.com/tomas-qstarrs/boost/ref"
+	"github.com/acoderup/boost/ref"
 
 	"gopkg.in/yaml.v2"
 )

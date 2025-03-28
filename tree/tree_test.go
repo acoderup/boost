@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/tomas-qstarrs/boost/encoding"
-	"github.com/tomas-qstarrs/boost/style"
-	"github.com/tomas-qstarrs/boost/tree"
+	"github.com/acoderup/boost/encoding"
+	"github.com/acoderup/boost/style"
+	"github.com/acoderup/boost/tree"
 )
 
 type Zoo struct {
