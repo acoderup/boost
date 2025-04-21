@@ -209,40 +209,53 @@ func MaxContinuousCount[T comparable](v T, s []T) (int, int, int) {
 // It preserves the original slice and returns a new sorted, unique slice.
 // Supported types: int, int64, float64, string, and other comparable types.
 func UniqueSorted[T comparable](input []T) []T {
-	// Handle empty or single-element slices
-	if len(input) <= 1 {
-		return append([]T(nil), input...)
+	// Handle empty slice
+	if len(input) == 0 {
+		return nil
 	}
 
-	// Create a copy to avoid modifying the original slice
-	result := make([]T, len(input))
-	copy(result, input)
+	// Handle single-element slice
+	if len(input) == 1 {
+		return []T{input[0]}
+	}
+
+	// Create a working copy only if needed (will be modified during sorting)
+	work := make([]T, len(input))
+	copy(work, input)
 
 	// Sort using type-specific comparison
-	sort.Slice(result, func(i, j int) bool {
-		switch v := any(result[i]).(type) {
+	sort.Slice(work, func(i, j int) bool {
+		switch v := any(work[i]).(type) {
 		case int:
-			return v < any(result[j]).(int)
+			return v < any(work[j]).(int)
 		case int64:
-			return v < any(result[j]).(int64)
+			return v < any(work[j]).(int64)
 		case float64:
-			return v < any(result[j]).(float64)
+			return v < any(work[j]).(float64)
 		case string:
-			return v < any(result[j]).(string)
+			return v < any(work[j]).(string)
 		default:
 			// Fallback for other comparable types (no ordering guaranteed)
 			return false
 		}
 	})
 
-	// Remove duplicates
-	j := 0
-	for i := 1; i < len(result); i++ {
-		if result[j] != result[i] {
-			j++
-			result[j] = result[i]
+	// Pre-count unique elements to allocate result slice with exact capacity
+	uniqueCount := 1
+	for i := 1; i < len(work); i++ {
+		if work[i-1] != work[i] {
+			uniqueCount++
 		}
 	}
 
-	return result[:j+1]
+	// Build result with exact size
+	result := make([]T, 0, uniqueCount)
+	result = append(result, work[0])
+	for i := 1; i < len(work); i++ {
+		if work[i-1] != work[i] {
+			result = append(result, work[i])
+		}
+	}
+
+	return result
 }
