@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"math"
+	"sort"
 	"strconv"
 )
 
@@ -202,4 +203,46 @@ func MaxContinuousCount[T comparable](v T, s []T) (int, int, int) {
 		}
 	}
 	return maxCount, start, end
+}
+
+// UniqueSorted sorts and removes duplicates from a slice of comparable elements.
+// It preserves the original slice and returns a new sorted, unique slice.
+// Supported types: int, int64, float64, string, and other comparable types.
+func UniqueSorted[T comparable](input []T) []T {
+	// Handle empty or single-element slices
+	if len(input) <= 1 {
+		return append([]T(nil), input...)
+	}
+
+	// Create a copy to avoid modifying the original slice
+	result := make([]T, len(input))
+	copy(result, input)
+
+	// Sort using type-specific comparison
+	sort.Slice(result, func(i, j int) bool {
+		switch v := any(result[i]).(type) {
+		case int:
+			return v < any(result[j]).(int)
+		case int64:
+			return v < any(result[j]).(int64)
+		case float64:
+			return v < any(result[j]).(float64)
+		case string:
+			return v < any(result[j]).(string)
+		default:
+			// Fallback for other comparable types (no ordering guaranteed)
+			return false
+		}
+	})
+
+	// Remove duplicates
+	j := 0
+	for i := 1; i < len(result); i++ {
+		if result[j] != result[i] {
+			j++
+			result[j] = result[i]
+		}
+	}
+
+	return result[:j+1]
 }
