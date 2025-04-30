@@ -259,3 +259,29 @@ func UniqueSorted[T comparable](input []T) []T {
 
 	return result
 }
+
+// CoinToFloat 将整数表示的货币金额(放大10000倍存储)转换为浮点数表示的常规金额
+// 例如：将存储的 998866800 (表示 99886.68) 转换为 99886.68
+// 参数:
+//   storedCoin - 以整数形式存储的金额(实际值 ×10000)
+// 返回值:
+//   浮点数表示的实际金额，保留2位小数
+func CoinToFloat(storedCoin int64) float64 {
+	// 1. 先除以10000还原实际值
+	// 2. 乘以100保留2位小数精度
+	// 3. 使用math.Round四舍五入
+	// 4. 再除以100得到最终结果
+	return math.Round(float64(storedCoin)/10000*100) / 100
+}
+
+// FloatToCoin 将浮点数表示的金额转换为整数存储形式(放大10000倍)
+// 例如：将 99886.68 转换为 998866800 存储
+// 参数:
+//   amount - 浮点数表示的金额
+// 返回值:
+//   以整数形式存储的金额(实际值 ×10000)
+func FloatToCoin(amount float64) int64 {
+	// 1. 先乘以10000转换为整数表示
+	// 2. 加0.5实现四舍五入而非截断
+	return int64(amount*10000 + 0.5)
+}
