@@ -285,3 +285,42 @@ func FloatToCoin(amount float64) int64 {
 	// 2. 加0.5实现四舍五入而非截断
 	return int64(amount*10000 + 0.5)
 }
+
+// RoundFloat rounds a float64 value to specified decimal places.
+// Defaults to 2 decimal places if no arguments are provided.
+//
+// Parameters:
+//   - val: The float64 value to be rounded
+//   - n: Optional number of decimal places (must be >= 0)
+//
+// Returns:
+//   - The rounded float64 value
+//
+// Examples:
+//   RoundFloat(3.14159)      // Returns 3.14 (default 2 decimal places)
+//   RoundFloat(3.14159, 3)   // Returns 3.142
+//   RoundFloat(3.14159, 0)   // Returns 3 (round to integer)
+//   RoundFloat(3.14159, -1)  // Returns 3.14 (negative values ignored)
+func RoundFloat(val float64, n ...int) float64 {
+	// Default to 2 decimal places if not specified
+	decimalPlaces := 2
+
+	// Check if optional decimal places argument was provided
+	if len(n) > 0 {
+		// Only accept non-negative values
+		if n[0] >= 0 {
+			decimalPlaces = n[0]
+		}
+		// Negative values are ignored (keep default 2 decimal places)
+	}
+
+	// Calculate the ratio for decimal place adjustment
+	// Example: for 2 decimal places, ratio = 10^2 = 100
+	ratio := math.Pow(10, float64(decimalPlaces))
+
+	// Round the value:
+	// 1. Multiply by ratio to shift decimal places
+	// 2. Apply math.Round
+	// 3. Divide by ratio to restore original scale
+	return math.Round(val*ratio) / ratio
+}
